@@ -1,0 +1,8 @@
+To run this this project, you should follow these steps:
+1) You must install Python interpreter (i used Python 3.7)
+2) In console open root directory this project and run command:
+	pip install -r requirements.txt
+3) After installation run this command:
+	python manage.py runserver
+
+After this, the development server should be runned, and you can test this. Enjoy :)
