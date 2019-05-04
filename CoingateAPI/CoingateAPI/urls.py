@@ -21,7 +21,11 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path("", include('paid.urls'))
+    # Main page for paid
+    path("", include('paid.urls')),
+
+    # list orders
+    path("orders", include('orders_list.urls')),
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
 ]

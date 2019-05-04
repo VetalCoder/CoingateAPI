@@ -37,6 +37,22 @@
     <Compile Include="CoingateAPI\settings.py" />
     <Compile Include="CoingateAPI\urls.py" />
     <Compile Include="CoingateAPI\wsgi.py" />
+    <Compile Include="orders_list\admin.py" />
+    <Compile Include="orders_list\apps.py" />
+    <Compile Include="orders_list\migrations\__init__.py" />
+    <Compile Include="orders_list\models.py" />
+    <Compile Include="orders_list\templatetags\filters.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders_list\templatetags\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders_list\tests.py" />
+    <Compile Include="orders_list\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders_list\views.py" />
+    <Compile Include="orders_list\__init__.py" />
     <Compile Include="paid\admin.py" />
     <Compile Include="paid\apps.py" />
     <Compile Include="paid\migrations\__init__.py" />
@@ -49,11 +65,18 @@
     <Compile Include="paid\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="orders_list\templates\orders_list\detail.html" />
+    <Content Include="orders_list\templates\orders_list\index.html" />
     <Content Include="paid\templates\paid\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CoingateAPI\" />
+    <Folder Include="orders_list\" />
+    <Folder Include="orders_list\migrations\" />
+    <Folder Include="orders_list\templatetags\" />
+    <Folder Include="orders_list\templates\" />
+    <Folder Include="orders_list\templates\orders_list\" />
     <Folder Include="paid\" />
     <Folder Include="paid\migrations\" />
     <Folder Include="paid\templates\" />

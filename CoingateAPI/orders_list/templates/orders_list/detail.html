@@ -1,0 +1,25 @@
+﻿{% load static %}
+
+<html>
+<head>
+    <title>Detail order {{ order.id }}</title>
+    <link rel="stylesheet" href="{% static 'orders_list/styles.css' %}">
+</head>
+<body>
+    <h1>Details for order {{ order.id }}</h1>
+
+    <p>Order ID: {{ order.id }}</p>
+    <p>Status: {{ order.status }}</p>
+    <p>Price currency: {{ order.price_currency }}</p>
+    <p>Pay currency: {{ order.pay_currency }}</p>
+    <p>Pay amount: {{ order.pay_amount }}</p>
+    <p>Receive currency: {{ order.receive_currency }}</p>
+    <p>Receive amount: {{ order.receive_amount }}</p>
+    <p>Created at: {{ order.created_at }}</p>
+    <p>Expire at: {{ order.expire_at }}</p>
+    <p>Underpaid amount: {{ order.underpaid_amount }}</p>
+    <p>Overpaid amount: {{ order.overpaid_amount }}</p>
+
+    <a class="back_link" href="{% url 'orders_list:orders' %}">Back to list orders</a>
+</body>
+</html>

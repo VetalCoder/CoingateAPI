@@ -1,0 +1,43 @@
+{% load filters %}
+{% load static %}
+
+<html>
+<head>
+    <title>Orders</title>
+    <link rel="stylesheet" href="{% static 'orders_list/styles.css' %}">
+
+</head>
+
+<body>
+
+    <h1>Orders List</h1>
+    <h2>Orders:</h2>
+    {% if pages > 1 %}
+    <form action="" method="get">
+        <select name="page">
+            {% for page in pages|to_list %}
+            <option {% if selected_page == page %} selected {% endif %}>{{page}}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Find</button>
+    </form>
+    {% endif %}
+
+    <ul>
+        {% for order in orders %}    
+            <li>
+                <a href="{% url 'orders_list:detail' order.id %}">
+                    <div class="id">ID: {{ order.id }}</div>
+                    <div class="status">STATUS: {{ order.status }}</div>
+                    <div class="price">PRICE: {{ order.price_amount }}</div>
+                    <div class="currency">CURRENCY: {{ order.price_currency }}</div>
+                    <div class="create">CREATED: {{ order.created_at }}</div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a class="back_link" href="{% url 'paid:pay' %}">Back to store</a>
+
+</body>
+</html>

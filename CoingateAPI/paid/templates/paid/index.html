@@ -1,5 +1,10 @@
+{% load static %}
+
 <html>
-<head><title>Coingate Api</title></head>
+<head>
+    <title>Coingate Api</title>
+    <link rel="stylesheet" href="{% static 'paid/styles.css' %}">
+</head>
 
 <body>
 
@@ -7,9 +12,13 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <input type="number" name="value"/>
+        <label>Enter some value to paid:</label>
+        <input type="number" step=any name="value"/>
+        <label class="errors">{{errors}}</label>
         <button type="submit">Submit</button>
     </form>
+
+    <a href="{% url 'orders_list:orders' %}">Show List Orders</a>
 
     <!--<a href="https://coingate.com/pay/simplepb" rel="noopener noreferrer nofollow" target="_blank">
         <img alt="CoinGate Payment Button" src="https://static.coingate.com/images/buttons/3.png" />

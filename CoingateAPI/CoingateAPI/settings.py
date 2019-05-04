@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # my app
     'paid',
+    'orders_list',
 ]
 
 # Middleware framework

@@ -1,0 +1,65 @@
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: saddlebrown;
+    text-align: center;
+    font-size: 45px;
+}
+
+form {
+    margin: auto;
+    width: 300px;
+    padding: 25px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+input, button {
+    border: 1px solid saddlebrown;
+    border-radius: 10px;
+    background-color: darkgrey;
+    font-size: 22px;
+    color: saddlebrown;
+    margin: 5px;
+    padding: 0px 5px;
+}
+
+label {
+    color: saddlebrown;
+    margin: 0px 0px 0px 20px;
+    font-size: 22px;
+    font-style: italic;
+    float: left;
+}
+
+button {
+    transition: color 1s, background 1s, border 1s;
+    padding: 10px 25px;
+}
+
+    button:hover {
+        color: darkgrey;
+        background: saddlebrown;
+        border: 1px solid black;
+        transition: color 1s, background 1s, border 1s;
+    }
+
+.errors {
+    font-size: 15px;
+    color: chocolate;
+}
+
+a {
+    display: block;
+    margin: 20px 100px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: italic;
+    color: saddlebrown;
+}
