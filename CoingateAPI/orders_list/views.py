@@ -12,11 +12,8 @@ class OrdersView(TemplateView):
 
     def get(self, request):
         page = int(request.GET.get("page", 1))
-        print(request.GET, request.GET.get("page"))
         api = CoingateAPI(auth_token=settings.AUTH_TOKEN, environment='sandbox')
-        response = api.orders(per_page=50, page=page)
-
-        print(response["total_pages"])
+        response = api.orders(per_page=5, page=page)
 
         context = {
             "orders" : response.get("orders"), 

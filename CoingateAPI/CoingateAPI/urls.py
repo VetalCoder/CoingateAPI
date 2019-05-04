@@ -25,7 +25,7 @@ urlpatterns = [
     path("", include('paid.urls')),
 
     # list orders
-    path("orders", include('orders_list.urls')),
+    path("orders/", include('orders_list.urls')),
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
 ]
