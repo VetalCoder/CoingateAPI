@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.http import HttpResponse
 
-from coingate_api import CoingateAPI, api_error
+from api import CoingateAPI, api_error
 
 # Create your views here.
 

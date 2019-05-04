@@ -1,6 +1,5 @@
 certifi==2019.3.9
 chardet==3.0.4
-coingate-api==0.1.5
 Django==2.2.1
 idna==2.8
 pip==18.1

@@ -1,4 +1,4 @@
-from coingate_api.api_error import *
+from .api_error import *
 
 
 class Error:
@@ -57,3 +57,4 @@ class Error:
         error_class = errors_map.get(reason if reason in errors_map else '')
 
         raise error_class(Error.format_error(error))
+

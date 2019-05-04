@@ -71,3 +71,4 @@ class RateLimitError(APIError):
 # HTTP Status 500, 504
 class InternalServerError(APIError):
     pass
+

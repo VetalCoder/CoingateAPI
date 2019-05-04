@@ -1,8 +1,8 @@
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from coingate_api.api_error import BadEnvironment, BadAuthToken, APIError
-from coingate_api.error import Error
+from .api_error import BadEnvironment, BadAuthToken, APIError
+from .error import Error
 
 
 DEFAULT_SETTINGS = {
@@ -174,5 +174,6 @@ class CoingateAPI(object):
         data['receive_currency'] = receive_currency
 
         return self.do_request(url='/orders', method='post', payload=data)
+
 
 

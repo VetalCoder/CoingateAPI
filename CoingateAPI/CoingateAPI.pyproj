@@ -32,6 +32,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="api\api_error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\coingate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="manage.py" />
     <Compile Include="CoingateAPI\__init__.py" />
     <Compile Include="CoingateAPI\settings.py" />
@@ -72,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CoingateAPI\" />
+    <Folder Include="api\" />
     <Folder Include="orders_list\" />
     <Folder Include="orders_list\migrations\" />
     <Folder Include="orders_list\templatetags\" />
